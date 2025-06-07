@@ -1,0 +1,28 @@
+.app-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+select,
+button {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
