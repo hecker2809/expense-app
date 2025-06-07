@@ -59,7 +59,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5000/api/expenses', {
+      const res = await fetch('https://expense-app-zcuv.onrender.com/api/expenses', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -81,7 +81,7 @@ function App() {
 
   const fetchExpenses = async () => {
     try {
-      let url = 'http://localhost:5000/api/expenses?';
+      let url = 'https://expense-app-zcuv.onrender.com/api/expenses?';
       if (filters.dateRange && filters.dateRange !== 'all_time') url += `dateRange=${filters.dateRange}&`;
       if (filters.category.length > 0) url += `category=${filters.category.join(',')}&`;
       if (filters.paymentMode.length > 0) url += `paymentMode=${filters.paymentMode.join(',')}&`;
@@ -96,7 +96,7 @@ function App() {
 
   const fetchAnalytics = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/expenses/analytics');
+      const res = await fetch('https://expense-app-zcuv.onrender.com/api/expenses/analytics');
       const data = await res.json();
       setAnalytics(transformAnalyticsData(data));
     } catch (err) {
